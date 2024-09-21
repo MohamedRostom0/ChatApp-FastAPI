@@ -1,0 +1,6 @@
+fastapi==0.100.0
+uvicorn==0.23.1
+motor==3.1.1  # MongoDB async driver for Python
+pydantic==1.10.7
+passlib[bcrypt]==1.7.4  # For hashing passwords
+python-dotenv==1.0.0  # To load environment variables

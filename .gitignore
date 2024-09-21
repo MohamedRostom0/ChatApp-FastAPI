@@ -1,0 +1,64 @@
+.env
+# Python bytecode
+*.py[cod]
+__pycache__/
+*.so
+
+# Virtual environment
+venv/
+.env/
+
+# Environment variables
+*.env
+*.env.*
+
+# Python cache
+*.cache
+
+# Logs
+*.log
+logs/
+
+# Database
+*.sqlite3
+*.db
+*.sql
+*.bak
+
+# Test results
+.coverage
+.cache/
+coverage/
+htmlcov/
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Pytest
+.pytest_cache/
+
+# Static files
+/staticfiles/
+
+# MacOS files
+.DS_Store
+
+# Docker files (if using Docker)
+docker-compose.override.yml
+*.dockerfile
+
+# Node.js (if using Node for front-end builds)
+node_modules/
+build/
+
+# Dependencies
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Compiled C extensions
+*.so
