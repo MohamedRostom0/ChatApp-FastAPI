@@ -21,8 +21,9 @@ class UserService:
 
     async def get_user_by_email(self, email: str):
         user = self.collection.find_one({"email": email})
+
         if user:
-            return User(**user)
+            return User(**user, id=str(user['_id']))
         
         return None
     

@@ -10,7 +10,6 @@ from app.schemas.auth import LoginResponse
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 @router.post("/signup", response_model=UserResponse)
 async def signup(user_data: UserCreate, user_service: UserService = Depends(UserService)):
