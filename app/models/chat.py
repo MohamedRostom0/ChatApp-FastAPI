@@ -7,7 +7,7 @@ class MessageStatus(str, Enum):
     RECEIVED = 'received'
 
 class Message(BaseModel):
-    _id: str = None
+    id: str = None
     message: str
     user_id: str
     timestamp: datetime 

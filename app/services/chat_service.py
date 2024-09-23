@@ -14,6 +14,9 @@ class ChatService:
     async def get_chat_by_userId(self, userId: str):
         cursor = self.collection.find({"user_id": userId})
         
-        messages = [Message(**message) for message in cursor]
+        messages = []
+        # messages = [Message(**message) for message in cursor]
+        for message in cursor:
+            messages.append(Message(id=str(message['_id']), message=message['message'], user_id=message['user_id'], timestamp=message['timestamp'], status=message['status']))
 
         return messages

@@ -12,7 +12,7 @@ from app.core.middlewares import authenticate
 router = APIRouter(prefix="/chat", tags=["chat"])
 
 
-@router.get("/{user_id}")
+@router.get("/{user_id}", response_model=list[Message])
 async def get_chat(user_id: str, user: User = Depends(authenticate), chat_service: ChatService = Depends(ChatService)):
     if user_id != user.id:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail=f"User {user_id} cannot access resources of user {user.id}")
